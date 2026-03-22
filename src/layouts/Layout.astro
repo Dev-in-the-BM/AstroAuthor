@@ -38,6 +38,9 @@ const { language, textDirection } = I18N;
 
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
+
+    <!-- fsLightbox for image grids -->
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
@@ -45,10 +48,16 @@ const { language, textDirection } = I18N;
 
     <BasicScripts />
 
-    <!-- fsLightbox for image grids -->
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
     <script is:inline>
       document.addEventListener('astro:page-load', () => {
+        // Clear fsLightbox instances cache on page transition
+        // Otherwise it tries to open destroyed DOM elements and fails silently
+        if (typeof fsLightboxInstances !== 'undefined') {
+          for (const key in fsLightboxInstances) {
+            delete fsLightboxInstances[key];
+          }
+        }
+
         if (typeof refreshFsLightbox !== 'undefined') refreshFsLightbox();
         setupSmoothDetails();
       });
