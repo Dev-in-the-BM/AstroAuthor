@@ -49,6 +49,25 @@ const { language, textDirection } = I18N;
         --f-transition-duration: 0.4s;
         --f-animation-easing: ease-in-out;
       }
+
+      /* Limit the height of rich link preview cards */
+      .rlc-container {
+        max-height: 200px;
+        overflow: hidden;
+      }
+      .rlc-image-container {
+        max-height: 200px;
+      }
+      .rlc-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media (max-width: 640px) {
+        .rlc-container {
+          max-height: none; /* Allow text to flow naturally on mobile vertical layouts */
+        }
+      }
     </style>
   </head>
 
@@ -68,12 +87,23 @@ const { language, textDirection } = I18N;
         }
 
         setupSmoothDetails();
+        cleanupGithubLinkCards();
       });
 
       // Close lightbox before navigating to a new page
       document.addEventListener('astro:before-preparation', () => {
         if (typeof Fancybox !== 'undefined') Fancybox.close();
       });
+
+      // Clean up GitHub link preview descriptions
+      function cleanupGithubLinkCards() {
+        document.querySelectorAll('.rlc-container[href*="github.com"]').forEach(card => {
+          const desc = card.querySelector('.rlc-description');
+          if (desc && desc.textContent) {
+            desc.textContent = desc.textContent.replace(/\s*Contribute to [^\s]+ development by creating an account on GitHub\.?/i, '').trim();
+          }
+        });
+      }
 
       // Smooth animation for <details> tags
       function setupSmoothDetails() {
