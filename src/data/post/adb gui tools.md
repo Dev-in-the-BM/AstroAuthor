@@ -105,11 +105,39 @@ It offers a clean and modern graphical interface for working with ADB and automa
 
 https://adbappcontrol.com/en
 
-<br>
-
 ---
 
-<br>
+### Xtreme ADB
+
+The Ultimate ADB GUI Wrapper. Manage your Android devices with ease — no terminal required.
+
+:::details[Features]
+
+*   **Modern UI:** A clean design with full Light/Dark mode support.
+*   **Live Dashboard:** Real-time monitoring of Battery and RAM.
+*   **App Manager:** Bulk install APKs, uninstall system apps, force stop, and extract APKs to PC.
+*   **File Explorer:** Full GUI file manager to Copy, Paste, Rename, Delete, Upload, and Download files.
+*   **Fastboot & Recovery:** Boot live images without flashing, flash recovery/boot, and sideload ZIPs.
+*   **Wireless ADB:** Built-in pairing tool for Android 11+ (Pairing Code support) and TCP/IP toggler.
+*   **Tweaks:** Change DPI, Resolution, Animation Scales, and toggle visual pointers.
+*   **Backup & Restore:** Create full system backups (`.ab` files) and restore them.
+*   **Logcat:** Color-coded (*In Dark Mode only) real-time log stream to easily spot errors.
+:::
+
+##### Platforms:
+
+- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **Linux:** Planned ![Hourglass Not Done](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Hourglass%20Not%20Done.png#inline-30)
+- **macOs:** Planned ![Hourglass Not Done](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Hourglass%20Not%20Done.png#inline-30)
+
+**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
+
+:::grid
+![ss1](https://github.com/KPR-MAN/XtremeADB/raw/main/screenshots/ss1.png)
+![ss2](https://github.com/KPR-MAN/XtremeADB/raw/main/screenshots/ss2.png)
+:::
+
+---
 
 ### ATA GUI
 
@@ -151,15 +179,9 @@ ATA-GUI is an app that lets you perform advanced tasks on your Android™ device
 
 **Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
-<br>
-
 https://github.com/msartore/ATA-GUI
 
-<br>
-
 ---
-
-<br>
 
 ### AYA
 
