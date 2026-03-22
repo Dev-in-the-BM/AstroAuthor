@@ -137,6 +137,10 @@ The Ultimate ADB GUI Wrapper. Manage your Android devices with ease — no termi
 ![ss2](https://github.com/KPR-MAN/XtremeADB/raw/main/screenshots/ss2.png)
 :::
 
+https://kpr-man.github.io/XtremeADB
+
+https://github.com/KPR-MAN/XtremeADB
+
 ---
 
 ### ATA GUI

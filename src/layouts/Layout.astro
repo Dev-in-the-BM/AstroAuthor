@@ -39,8 +39,17 @@ const { language, textDirection } = I18N;
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
 
-    <!-- fsLightbox for image grids -->
-    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
+    <!-- Fancybox for image galleries (Magic Move) -->
+    <script is:inline src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <style is:inline>
+      /* Smooth out and slow down the Fancybox 'magic move' transition */
+      .fancybox__container {
+        --f-animation-duration: 0.4s;
+        --f-transition-duration: 0.4s;
+        --f-animation-easing: ease-in-out;
+      }
+    </style>
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
@@ -50,16 +59,20 @@ const { language, textDirection } = I18N;
 
     <script is:inline>
       document.addEventListener('astro:page-load', () => {
-        // Clear fsLightbox instances cache on page transition
-        // Otherwise it tries to open destroyed DOM elements and fails silently
-        if (typeof fsLightboxInstances !== 'undefined') {
-          for (const key in fsLightboxInstances) {
-            delete fsLightboxInstances[key];
-          }
+        // Re-bind Fancybox events when moving between pages
+        if (typeof Fancybox !== 'undefined') {
+          Fancybox.unbind('[data-fancybox]');
+          Fancybox.bind('[data-fancybox]', {
+            Images: { zoom: true }
+          });
         }
 
-        if (typeof refreshFsLightbox !== 'undefined') refreshFsLightbox();
         setupSmoothDetails();
+      });
+
+      // Close lightbox before navigating to a new page
+      document.addEventListener('astro:before-preparation', () => {
+        if (typeof Fancybox !== 'undefined') Fancybox.close();
       });
 
       // Smooth animation for <details> tags

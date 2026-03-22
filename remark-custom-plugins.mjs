@@ -98,7 +98,7 @@ export function remarkCustomDirectives() {
                       hName: 'a',
                       hProperties: {
                         href: imgSrc,
-                        'data-fslightbox': `grid-${gridId}`,
+                        'data-fancybox': `grid-${gridId}`,
                         'data-type': 'image',
                         class: 'cursor-zoom-in block w-full h-full'
                       }
