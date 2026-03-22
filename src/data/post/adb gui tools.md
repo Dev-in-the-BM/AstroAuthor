@@ -39,7 +39,7 @@ Android-Toolbox is a desktop app which enables the user to access android device
 
 **Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
-:::grid
+:::grid[Screenshots]
 ![connecting](https://github.com/lightningbolt047/Android-Toolbox/raw/main/readme_assets/screenshot_connection_initiation.png)
 ![file manager](https://github.com/lightningbolt047/Android-Toolbox/raw/main/readme_assets/screenshot_file_manager.png)
 ![apps](https://github.com/lightningbolt047/Android-Toolbox/raw/main/readme_assets/screenshot_apps.png)
@@ -97,10 +97,10 @@ It offers a clean and modern graphical interface for working with ADB and automa
 
 **Licensing: Freemium** ![Free Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Free%20Button.png#inline-30) ![Money Bag](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png#inline-30)
 
-:::grid
-![logo](https://adbappcontrol.com/assets/img/logo_blue_ac.png)
+:::grid[Screenshots]
 ![screenshot1](https://adbappcontrol.com/assets/img/scr-main-mini.jpg)
 ![appcontrols](https://adbappcontrol.com/assets/img/scr-features-1.jpg)
+![Tools](https://adbappcontrol.com/assets/img/scr-tools.jpg)
 :::
 
 https://adbappcontrol.com/en
@@ -132,7 +132,7 @@ The Ultimate ADB GUI Wrapper. Manage your Android devices with ease — no termi
 
 **Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
-:::grid
+:::grid[Screenshots]
 ![ss1](https://github.com/KPR-MAN/XtremeADB/raw/main/screenshots/ss1.png)
 ![ss2](https://github.com/KPR-MAN/XtremeADB/raw/main/screenshots/ss2.png)
 :::
@@ -211,11 +211,11 @@ AYA is a desktop application for easily controlling android devices, which can b
 
 **Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
-:::grid
+:::grid[Screenshots]
 ![screenshot](https://camo.githubusercontent.com/23cf9457427a62150c2180081c818154bde87dfa4e3afedf37e2fe918cf7e270/68747470733a2f2f6179612e6c6972696c6972692e696f2f73637265656e636173742e706e67)
 ![screenshot](https://camo.githubusercontent.com/0c8ed9b0c83f2c0fce0070c4c9c0cfd89fc144e78d6c674e334bf3935c0e0338/68747470733a2f2f6179612e6c6972696c6972692e696f2f73637265656e73686f742e706e67)
 :::
 
 https://github.com/liriliri/aya
 
-https://aya.liriliri.io/
+https://aya.liriliri.io

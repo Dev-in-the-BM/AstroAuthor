@@ -64,12 +64,23 @@ export function remarkCustomDirectives() {
       if (node.name === 'grid') {
         data.hName = 'div';
         data.hProperties = data.hProperties || {};
-        data.hProperties.class = 'not-prose grid grid-cols-2 md:grid-cols-3 gap-4 my-8';
+        data.hProperties.class = 'mt-8 mb-12'; // Add more margin at the bottom
 
         const gridId = Math.random().toString(36).substring(2, 9); // Create a unique ID for this specific grid
         const newChildren = [];
+        const gridCells = [];
+        let headerNode = null;
+
         // Iterate through the paragraphs inside the :::grid block
         for (const child of node.children) {
+          // Extract the label if it exists (e.g., :::grid[My Grid Title])
+          if (child.data && child.data.directiveLabel) {
+            child.data.hName = 'h4';
+            child.data.hProperties = { class: 'w-full text-center font-semibold text-xl md:text-2xl mb-6 pb-2 border-b border-gray-200 dark:border-gray-700' };
+            headerNode = child;
+            continue;
+          }
+
           if (child.type === 'paragraph') {
             // Iterate through the items inside the paragraph (images, text nodes)
             for (const item of child.children) {
@@ -86,8 +97,8 @@ export function remarkCustomDirectives() {
                   imageNode.data = imageNode.data || {};
                   imageNode.data.hProperties = imageNode.data.hProperties || {};
                   const existingClasses = imageNode.data.hProperties.class || '';
-                  // Add a hover effect so the user knows it's clickable
-                  imageNode.data.hProperties.class = `${existingClasses} w-full h-auto rounded-lg shadow-sm object-cover transition-transform duration-300 hover:scale-[1.03]`.trim();
+                  // Add a hover effect, prevent clipping by using object-contain, and center it
+                  imageNode.data.hProperties.class = `${existingClasses} max-w-full max-h-full mx-auto rounded-lg shadow-sm object-contain transition-transform duration-300 hover:scale-[1.03]`.trim();
                   
                   // Wrap the image in a lightbox link, grouped by the unique grid ID
                   const imgSrc = imageNode.url;
@@ -100,7 +111,7 @@ export function remarkCustomDirectives() {
                         href: imgSrc,
                         'data-fancybox': `grid-${gridId}`,
                         'data-type': 'image',
-                        class: 'cursor-zoom-in block w-full h-full'
+                        class: 'cursor-zoom-in flex items-center justify-center w-full h-full'
                       }
                     },
                     children: [imageNode]
@@ -108,9 +119,9 @@ export function remarkCustomDirectives() {
               }
               
               // **The Fix:** Wrap each item (image or link-with-image) in its own div to act as a grid cell.
-              newChildren.push({
+              gridCells.push({
                 type: 'paragraph', // Use a block-level type that remark understands
-                data: { hName: 'div', hProperties: { class: 'flex w-full overflow-hidden rounded-lg' } }, // Render this node as a <div>
+                data: { hName: 'div', hProperties: { class: 'flex items-center justify-center w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] overflow-hidden rounded-lg' } }, // Render this node as a <div>
                 children: [cellContent],
               });
             }
@@ -118,6 +129,20 @@ export function remarkCustomDirectives() {
             // Preserve non-paragraph children so we don't accidentally drop blocks
             newChildren.push(child);
           }
+        }
+
+        // Add the parsed label to the very top, if provided
+        if (headerNode) {
+          newChildren.unshift(headerNode);
+        }
+
+        // Add the flex container housing all the images
+        if (gridCells.length > 0) {
+          newChildren.push({
+            type: 'paragraph',
+            data: { hName: 'div', hProperties: { class: 'not-prose flex flex-wrap justify-center gap-4 mx-auto' } },
+            children: gridCells
+          });
         }
 
         // Replace the grid's children with our new set of divs
