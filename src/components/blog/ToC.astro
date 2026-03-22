@@ -1,0 +1,32 @@
+---
+export interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { headings } = Astro.props;
+
+// Filter for standard section headers (h2 and h3) to keep it clean
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{toc.length > 0 ? (
+  <nav class="hidden lg:block sticky top-28 self-start w-64 shrink-0 pl-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+    <div class="text-xs font-bold uppercase tracking-widest text-muted mb-3">
+      On this page
+    </div>
+    <ul class="flex flex-col gap-2.5 text-sm">
+      {toc.map((heading) => (
+        <li class={heading.depth === 3 ? "ml-4" : ""}>
+          <a
+            href={`#${heading.slug}`}
+            class="text-gray-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors line-clamp-2"
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+) : (
+  <div class="hidden lg:block w-64 shrink-0 pl-8 text-red-500 text-xs mt-10">ToC Debug: No headings passed!</div>
+)}

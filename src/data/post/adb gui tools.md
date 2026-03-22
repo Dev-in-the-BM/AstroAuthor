@@ -104,6 +104,7 @@ It offers a clean and modern graphical interface for working with ADB and automa
 :::
 
 https://adbappcontrol.com/en
+
 <br>
 
 ---
@@ -144,7 +145,7 @@ ATA-GUI is an app that lets you perform advanced tasks on your Android™ device
 
 #### Platforms:
 
-- **Windows:** Yes ![Check Mark Button](ttps://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
 - **Linux:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
 - **macOs:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
 
