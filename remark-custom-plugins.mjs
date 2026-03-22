@@ -66,6 +66,7 @@ export function remarkCustomDirectives() {
         data.hProperties = data.hProperties || {};
         data.hProperties.class = 'not-prose grid grid-cols-2 md:grid-cols-3 gap-4 my-8';
 
+        const gridId = Math.random().toString(36).substring(2, 9); // Create a unique ID for this specific grid
         const newChildren = [];
         // Iterate through the paragraphs inside the :::grid block
         for (const child of node.children) {
@@ -78,19 +79,39 @@ export function remarkCustomDirectives() {
               // Find the actual image node, whether it's standalone or in a link
               const imageNode = item.type === 'image' ? item : (item.type === 'link' && item.children?.[0]?.type === 'image' ? item.children[0] : null);
   
+              let cellContent = item;
+
               // If we found an image, style it to fill its container
               if (imageNode) {
                   imageNode.data = imageNode.data || {};
                   imageNode.data.hProperties = imageNode.data.hProperties || {};
                   const existingClasses = imageNode.data.hProperties.class || '';
-                  imageNode.data.hProperties.class = `${existingClasses} w-full h-auto rounded-lg shadow-sm object-cover`.trim();
+                  // Add a hover effect so the user knows it's clickable
+                  imageNode.data.hProperties.class = `${existingClasses} w-full h-auto rounded-lg shadow-sm object-cover transition-transform duration-300 hover:scale-[1.03]`.trim();
+                  
+                  // Wrap the image in a lightbox link, grouped by the unique grid ID
+                  const imgSrc = imageNode.url;
+                  cellContent = {
+                    type: 'link',
+                    url: imgSrc,
+                    data: {
+                      hName: 'a',
+                      hProperties: {
+                        href: imgSrc,
+                        'data-fslightbox': `grid-${gridId}`,
+                        'data-type': 'image',
+                        class: 'cursor-zoom-in block w-full h-full'
+                      }
+                    },
+                    children: [imageNode]
+                  };
               }
               
               // **The Fix:** Wrap each item (image or link-with-image) in its own div to act as a grid cell.
               newChildren.push({
                 type: 'paragraph', // Use a block-level type that remark understands
-                data: { hName: 'div', hProperties: { class: 'flex w-full' } }, // Render this node as a <div>
-                children: [item],
+                data: { hName: 'div', hProperties: { class: 'flex w-full overflow-hidden rounded-lg' } }, // Render this node as a <div>
+                children: [cellContent],
               });
             }
           } else {

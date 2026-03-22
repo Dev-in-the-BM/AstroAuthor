@@ -44,5 +44,75 @@ const { language, textDirection } = I18N;
     <slot />
 
     <BasicScripts />
+
+    <!-- fsLightbox for image grids -->
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.4.1/index.min.js"></script>
+    <script is:inline>
+      document.addEventListener('astro:page-load', () => {
+        if (typeof refreshFsLightbox !== 'undefined') refreshFsLightbox();
+        setupSmoothDetails();
+      });
+
+      // Smooth animation for <details> tags
+      function setupSmoothDetails() {
+        document.querySelectorAll('details').forEach(details => {
+          const summary = details.querySelector('summary');
+          if (!summary || details.dataset.smoothInit) return;
+          details.dataset.smoothInit = "true";
+
+          summary.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Prevent clicking while animation is already running
+            if (details.dataset.isAnimating) return;
+            details.dataset.isAnimating = "true";
+
+            const isOpen = details.hasAttribute('open');
+
+            if (isOpen) {
+              // Calculate heights for closing
+              const startHeight = details.offsetHeight;
+              details.removeAttribute('open');
+              const endHeight = details.offsetHeight;
+              details.setAttribute('open', '');
+
+              details.style.height = startHeight + 'px';
+              details.style.overflow = 'hidden';
+              details.offsetHeight; // force browser reflow
+
+              details.style.transition = 'height 0.3s ease-in-out';
+              details.style.height = endHeight + 'px';
+
+              setTimeout(() => {
+                details.removeAttribute('open');
+                details.style.height = '';
+                details.style.transition = '';
+                details.style.overflow = '';
+                delete details.dataset.isAnimating;
+              }, 300);
+            } else {
+              // Calculate heights for opening
+              const startHeight = details.offsetHeight;
+              details.setAttribute('open', '');
+              const endHeight = details.offsetHeight;
+
+              details.style.height = startHeight + 'px';
+              details.style.overflow = 'hidden';
+              details.offsetHeight; // force browser reflow
+
+              details.style.transition = 'height 0.3s ease-in-out';
+              details.style.height = endHeight + 'px';
+
+              setTimeout(() => {
+                details.style.height = '';
+                details.style.transition = '';
+                details.style.overflow = '';
+                delete details.dataset.isAnimating;
+              }, 300);
+            }
+          });
+        });
+      }
+    </script>
   </body>
 </html>

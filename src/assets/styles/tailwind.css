@@ -102,3 +102,41 @@
 .prose :where(code):not(:where([class~="not-prose"] *))::after {
   content: '';
 }
+
+/* remark-link-card styling */
+.prose .rlc-container {
+  @apply flex flex-col sm:flex-row no-underline border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden my-8 shadow-sm hover:shadow-md transition-shadow bg-gray-50 dark:bg-slate-800;
+  text-decoration: none !important;
+}
+
+.prose .rlc-info {
+  @apply p-4 flex flex-col justify-between flex-1;
+}
+
+.prose .rlc-title {
+  @apply text-lg font-bold text-gray-900 dark:text-slate-100 mt-0 mb-2 line-clamp-2;
+}
+
+.prose .rlc-description {
+  @apply text-sm text-gray-600 dark:text-slate-400 line-clamp-2 mb-3 mt-0 leading-snug;
+}
+
+.prose .rlc-url-container {
+  @apply flex items-center gap-2 mt-auto;
+}
+
+.prose .rlc-favicon {
+  @apply w-4 h-4 m-0 inline-block;
+}
+
+.prose .rlc-url {
+  @apply text-xs text-gray-500 dark:text-slate-400 truncate m-0;
+}
+
+.prose .rlc-image-container {
+  @apply w-full sm:w-64 h-48 sm:h-auto shrink-0 border-t sm:border-t-0 sm:border-l border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900;
+}
+
+.prose .rlc-image {
+  @apply w-full h-full object-cover m-0;
+}

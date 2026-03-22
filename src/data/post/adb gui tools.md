@@ -10,7 +10,7 @@ categories:
   - Android
 ---
 
-ADB is a powerful tool that you can use to control your Android device and tweak hidden settings, but the command line can be tpp complicated for many.
+ADB is a powerful tool that you can use to control your Android device and tweak hidden settings, but the command line can be too complicated for many.
 
 The following desktop apps offer a GUI for ADB, allowing you to make use of ADBs powerful functionality without having to use the terminal.
 
@@ -33,11 +33,11 @@ Android-Toolbox is a desktop app which enables the user to access android device
 
 ##### Platforms:
 
-- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-25)
-- **Linux:** Planned ![Hourglass Not Done](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Hourglass%20Not%20Done.png#inline-25)
-- **macOs:** Planned ![Hourglass Not Done](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Hourglass%20Not%20Done.png#inline-25)
+- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **Linux:** Planned ![Hourglass Not Done](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Hourglass%20Not%20Done.png#inline-30)
+- **macOs:** Planned ![Hourglass Not Done](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Hourglass%20Not%20Done.png#inline-30)
 
-**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-25)
+**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
 :::grid
 ![connecting](https://github.com/lightningbolt047/Android-Toolbox/raw/main/readme_assets/screenshot_connection_initiation.png)
@@ -90,11 +90,12 @@ It offers a clean and modern graphical interface for working with ADB and automa
 
 #### Platforms:
 
-- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-25)
-- **Linux:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-25)
-- **macOs:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-25)
+- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **Linux:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
+- **macOs:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
 
-**Licensing: Freemium** ![Free Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Free%20Button.png#inline-25) ![Money Bag](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png#inline-25)
+
+**Licensing: Freemium** ![Free Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Free%20Button.png#inline-30) ![Money Bag](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png#inline-30)
 
 :::grid
 ![logo](https://adbappcontrol.com/assets/img/logo_blue_ac.png)
@@ -102,8 +103,7 @@ It offers a clean and modern graphical interface for working with ADB and automa
 ![appcontrols](https://adbappcontrol.com/assets/img/scr-features-1.jpg)
 :::
 
-https://adbappcontrol.com/en/
-
+https://adbappcontrol.com/en
 <br>
 
 ---
@@ -144,11 +144,11 @@ ATA-GUI is an app that lets you perform advanced tasks on your Android™ device
 
 #### Platforms:
 
-- **Windows:** Yes ![Check Mark Button](ttps://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-25)
-- **Linux:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-25)
-- **macOs:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-25)
+- **Windows:** Yes ![Check Mark Button](ttps://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **Linux:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
+- **macOs:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
 
-**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-25)
+**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
 <br>
 
@@ -178,11 +178,11 @@ AYA is a desktop application for easily controlling android devices, which can b
 
 #### Platforms:
 
-- **Windows:** Yes ![Check Mark Button](ttps://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-25)
-- **Linux:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-25)
-- **macOs:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-25)
+- **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **Linux:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
+- **macOs:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
 
-**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-25)
+**Licensing: FOSS** ![Penguin](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Penguin.png#inline-33)
 
 :::grid
 ![screenshot](https://camo.githubusercontent.com/23cf9457427a62150c2180081c818154bde87dfa4e3afedf37e2fe918cf7e270/68747470733a2f2f6179612e6c6972696c6972692e696f2f73637265656e636173742e706e67)
