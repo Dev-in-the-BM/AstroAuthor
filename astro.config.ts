@@ -14,6 +14,10 @@ import type { AstroIntegration } from 'astro';
 import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
+import remarkDirective from 'remark-directive';
+import remarkLinkCard from 'remark-link-card';
+
+import { remarkSmartImages, remarkCustomDirectives } from './remark-custom-plugins.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -76,7 +80,12 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [readingTimeRemarkPlugin],
+    remarkPlugins: [
+      remarkLinkCard, // Temporarily disabled to debug build crash
+      remarkDirective,
+      remarkSmartImages,
+      remarkCustomDirectives,
+    ],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
 
