@@ -82,7 +82,8 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [
-      remarkLinkCard,,
+      remarkLinkCard,
+      remarkDirective,
       remarkSmartImages,
       remarkCustomDirectives,
       remarkSpoilers,
