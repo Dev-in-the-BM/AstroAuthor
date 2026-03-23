@@ -16,6 +16,7 @@ import astrowind from './vendor/integration';
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 import remarkDirective from 'remark-directive';
 import remarkLinkCard from 'remark-link-card';
+import remarkSpoilers from 'remark-spoilers';
 
 import { remarkSmartImages, remarkCustomDirectives } from './remark-custom-plugins.mjs';
 
@@ -81,10 +82,10 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [
-      remarkLinkCard, // Temporarily disabled to debug build crash
-      remarkDirective,
+      remarkLinkCard,,
       remarkSmartImages,
       remarkCustomDirectives,
+      remarkSpoilers,
     ],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
