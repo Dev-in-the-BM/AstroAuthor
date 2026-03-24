@@ -14,10 +14,10 @@ The shape of a mexico becomes a whinny bacon. Authors often misinterpret the pai
 We know that their drop was, in this moment, an unwarped female. The first surly element is, in its own way, a lace. A hot is the actress of a precipitation. A match is the quart of a newsprint.
 
 :::grid[gallery]
-![First Image](~/my-site/assets/images/image1.png#400)
-![Second Image](~/my-site/assets/images/image2.png#400)
-![Third Image](~/my-site/assets/images/image3.png#400)
-![Fourth Image](~/my-site/assets/images/image4.png#400)
+![First Image](https://github.com/Dev-in-the-BM/AstroAuthor/blob/Portable--testing/src/my-site/assets/images/image1.jpg?raw=true#400)
+![Second Image](https://github.com/Dev-in-the-BM/AstroAuthor/blob/Portable--testing/src/my-site/assets/images/image2.jpg?raw=true#400)
+![Third Image](https://github.com/Dev-in-the-BM/AstroAuthor/blob/Portable--testing/src/my-site/assets/images/image2.jpg?raw=true#400)
+![Fourth Image](https://github.com/Dev-in-the-BM/AstroAuthor/blob/Portable--testing/src/my-site/assets/images/image4.jpg?raw=true#400)
 :::
 
 
