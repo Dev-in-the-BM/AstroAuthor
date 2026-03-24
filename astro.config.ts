@@ -57,7 +57,6 @@ export default defineConfig({
       })
     ),
 
-    sharp(), // Add the sharp integration here
     compress({
       CSS: true,
       HTML: {
