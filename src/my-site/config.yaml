@@ -9,7 +9,7 @@ metadata:
   title:
     default: AstroAuthor
     template: '%s — AstroAuthor'
-  description: "\U0001F680 AstroWind based site for blogging."
+  description: "\U0001F680 A template for blogging sites, based off of AstroWind."
   robots:
     index: true
     follow: true
