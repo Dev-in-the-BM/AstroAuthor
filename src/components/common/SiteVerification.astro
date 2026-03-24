@@ -1,5 +1,5 @@
 ---
-import { SITE } from 'astrowind:config';
+const siteVerificationId = import.meta.env.PUBLIC_SITE_VERIFICATION;
 ---
 
-{SITE.googleSiteVerificationId && <meta name="google-site-verification" content={SITE.googleSiteVerificationId} />}
+{siteVerificationId && <meta name="google-site-verification" content={siteVerificationId} />}

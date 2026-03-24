@@ -76,7 +76,10 @@ export function remarkCustomDirectives() {
           // Extract the label if it exists (e.g., :::grid[My Grid Title])
           if (child.data && child.data.directiveLabel) {
             child.data.hName = 'h4';
-            child.data.hProperties = { class: 'w-full text-center font-semibold text-xl md:text-2xl mb-6 pb-2 border-b border-gray-200 dark:border-gray-700' };
+            child.data.hProperties = {
+              class:
+                'w-full text-center font-semibold text-xl md:text-2xl mb-6 pb-2 border-b border-gray-200 dark:border-gray-700',
+            };
             headerNode = child;
             continue;
           }
@@ -86,42 +89,54 @@ export function remarkCustomDirectives() {
             for (const item of child.children) {
               // Skip empty text nodes (like newlines between images)
               if (item.type === 'text' && item.value.trim() === '') continue;
-  
+
               // Find the actual image node, whether it's standalone or in a link
-              const imageNode = item.type === 'image' ? item : (item.type === 'link' && item.children?.[0]?.type === 'image' ? item.children[0] : null);
-  
+              const imageNode =
+                item.type === 'image'
+                  ? item
+                  : item.type === 'link' && item.children?.[0]?.type === 'image'
+                    ? item.children[0]
+                    : null;
+
               let cellContent = item;
 
               // If we found an image, style it to fill its container
               if (imageNode) {
-                  imageNode.data = imageNode.data || {};
-                  imageNode.data.hProperties = imageNode.data.hProperties || {};
-                  const existingClasses = imageNode.data.hProperties.class || '';
-                  // Add a hover effect, prevent clipping by using object-contain, and center it
-                  imageNode.data.hProperties.class = `${existingClasses} max-w-full max-h-full mx-auto rounded-lg shadow-sm object-contain transition-transform duration-300 hover:scale-[1.03]`.trim();
-                  
-                  // Wrap the image in a lightbox link, grouped by the unique grid ID
-                  const imgSrc = imageNode.url;
-                  cellContent = {
-                    type: 'link',
-                    url: imgSrc,
-                    data: {
-                      hName: 'a',
-                      hProperties: {
-                        href: imgSrc,
-                        'data-fancybox': `grid-${gridId}`,
-                        'data-type': 'image',
-                        class: 'cursor-zoom-in flex items-center justify-center w-full h-full'
-                      }
+                imageNode.data = imageNode.data || {};
+                imageNode.data.hProperties = imageNode.data.hProperties || {};
+                const existingClasses = imageNode.data.hProperties.class || '';
+                // Add a hover effect, prevent clipping by using object-contain, and center it
+                imageNode.data.hProperties.class =
+                  `${existingClasses} max-w-full max-h-full mx-auto rounded-lg shadow-sm object-contain transition-transform duration-300 hover:scale-[1.03]`.trim();
+
+                // Wrap the image in a lightbox link, grouped by the unique grid ID
+                const imgSrc = imageNode.url;
+                cellContent = {
+                  type: 'link',
+                  url: imgSrc,
+                  data: {
+                    hName: 'a',
+                    hProperties: {
+                      href: imgSrc,
+                      'data-fancybox': `grid-${gridId}`,
+                      'data-type': 'image',
+                      class: 'cursor-zoom-in flex items-center justify-center w-full h-full',
                     },
-                    children: [imageNode]
-                  };
+                  },
+                  children: [imageNode],
+                };
               }
-              
+
               // **The Fix:** Wrap each item (image or link-with-image) in its own div to act as a grid cell.
               gridCells.push({
                 type: 'paragraph', // Use a block-level type that remark understands
-                data: { hName: 'div', hProperties: { class: 'flex items-center justify-center w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] overflow-hidden rounded-lg' } }, // Render this node as a <div>
+                data: {
+                  hName: 'div',
+                  hProperties: {
+                    class:
+                      'flex items-center justify-center w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] overflow-hidden rounded-lg',
+                  },
+                }, // Render this node as a <div>
                 children: [cellContent],
               });
             }
@@ -141,7 +156,7 @@ export function remarkCustomDirectives() {
           newChildren.push({
             type: 'paragraph',
             data: { hName: 'div', hProperties: { class: 'not-prose flex flex-wrap justify-center gap-4 mx-auto' } },
-            children: gridCells
+            children: gridCells,
           });
         }
 
@@ -152,7 +167,8 @@ export function remarkCustomDirectives() {
       if (node.name === 'spoiler') {
         data.hName = node.type === 'textDirective' ? 'span' : 'div';
         data.hProperties = data.hProperties || {};
-        data.hProperties.class = 'blur-sm hover:blur-none transition-all duration-300 cursor-pointer select-none bg-gray-200 dark:bg-gray-700 px-1 rounded';
+        data.hProperties.class =
+          'blur-sm hover:blur-none transition-all duration-300 cursor-pointer select-none bg-gray-200 dark:bg-gray-700 px-1 rounded';
       }
     });
   };

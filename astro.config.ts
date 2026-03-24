@@ -13,10 +13,9 @@ import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
 
-import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
+import { responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 import remarkDirective from 'remark-directive';
 import remarkLinkCard from 'remark-link-card';
-import remarkSpoilers from 'remark-spoilers';
 
 import { remarkSmartImages, remarkCustomDirectives } from './remark-custom-plugins.mjs';
 
@@ -72,7 +71,7 @@ export default defineConfig({
     }),
 
     astrowind({
-      config: './src/config.yaml',
+      config: './src/my-site/config.yaml',
     }),
   ],
 
@@ -81,13 +80,7 @@ export default defineConfig({
   },
 
   markdown: {
-    remarkPlugins: [
-      remarkLinkCard,
-      remarkDirective,
-      remarkSmartImages,
-      remarkCustomDirectives,
-      remarkSpoilers,
-    ],
+    remarkPlugins: [remarkLinkCard, remarkDirective, remarkSmartImages, remarkCustomDirectives],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
   },
 

@@ -22,14 +22,14 @@ Android-Toolbox is a desktop app which enables the user to access android device
 
 ##### Current features:
 
-* You can now perform some file management tasks (External SD card supported)
-* Reboot to system, recovery, fastboot, bootloader or simply power off using the power controls
-* You can offload, suspend, un-suspend, install, uninstall, kill or recompile apps.*(Apps are currently shown as package names only. I couldn't find a way to get app titles without pushing aapt to the mobile device.)*
-* Support for installing split apks and batch install apk*(Coming Soon)*
-* **Bloatware or other system apps can now be uninstalled**
-* **Full Windows Subsystem for Android (WSA) compatibility (WSA is retiring on March 5, 2025)**
-* *More soon......*
-:::
+- You can now perform some file management tasks (External SD card supported)
+- Reboot to system, recovery, fastboot, bootloader or simply power off using the power controls
+- You can offload, suspend, un-suspend, install, uninstall, kill or recompile apps._(Apps are currently shown as package names only. I couldn't find a way to get app titles without pushing aapt to the mobile device.)_
+- Support for installing split apks and batch install apk*(Coming Soon)*
+- **Bloatware or other system apps can now be uninstalled**
+- **Full Windows Subsystem for Android (WSA) compatibility (WSA is retiring on March 5, 2025)**
+- _More soon......_
+  :::
 
 ##### Platforms:
 
@@ -59,41 +59,39 @@ It offers a clean and modern graphical interface for working with ADB and automa
 
 #### App Control
 
-* Disable and uninstall applications without root
-* Multiple apps installing
-* Full Split installation support (APKS)
-* Saving APK files of installed applications
-* Permissions Manager for applications
-* Saving and loading applications list-presets
-* Quick search for apps on Google Play, ApkMirror, F-Droid and others
+- Disable and uninstall applications without root
+- Multiple apps installing
+- Full Split installation support (APKS)
+- Saving APK files of installed applications
+- Permissions Manager for applications
+- Saving and loading applications list-presets
+- Quick search for apps on Google Play, ApkMirror, F-Droid and others
 
 #### Useful tools
 
-* Displaying device information
-* Changing the screen resolution and DPI
-* Hiding icons in the status bar
-* Device remotely control
-* Virtual volume, power, camera and navigation buttons
-* Creating screenshots of the device screen
-* Quick reboot in recovery and bootloader
+- Displaying device information
+- Changing the screen resolution and DPI
+- Hiding icons in the status bar
+- Device remotely control
+- Virtual volume, power, camera and navigation buttons
+- Creating screenshots of the device screen
+- Quick reboot in recovery and bootloader
 
 #### Advanced
 
-* ADB Console with favorites commands
-* Fastboot support
-* Logcat logs
-* Auto permission granting for popular apps (Tasker, Battery Stats, etc.)
-* Simple file upload
-* Extended Settings
-:::
-
+- ADB Console with favorites commands
+- Fastboot support
+- Logcat logs
+- Auto permission granting for popular apps (Tasker, Battery Stats, etc.)
+- Simple file upload
+- Extended Settings
+  :::
 
 #### Platforms:
 
 - **Windows:** Yes ![Check Mark Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png#inline-30)
 - **Linux:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
 - **macOs:** No ![Cross Mark](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Cross%20Mark.png#inline-30)
-
 
 **Licensing: Freemium** ![Free Button](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Free%20Button.png#inline-30) ![Money Bag](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png#inline-30)
 
@@ -113,16 +111,16 @@ The Ultimate ADB GUI Wrapper. Manage your Android devices with ease — no termi
 
 :::details[Features]
 
-*   **Modern UI:** A clean design with full Light/Dark mode support.
-*   **Live Dashboard:** Real-time monitoring of Battery and RAM.
-*   **App Manager:** Bulk install APKs, uninstall system apps, force stop, and extract APKs to PC.
-*   **File Explorer:** Full GUI file manager to Copy, Paste, Rename, Delete, Upload, and Download files.
-*   **Fastboot & Recovery:** Boot live images without flashing, flash recovery/boot, and sideload ZIPs.
-*   **Wireless ADB:** Built-in pairing tool for Android 11+ (Pairing Code support) and TCP/IP toggler.
-*   **Tweaks:** Change DPI, Resolution, Animation Scales, and toggle visual pointers.
-*   **Backup & Restore:** Create full system backups (`.ab` files) and restore them.
-*   **Logcat:** Color-coded (*In Dark Mode only) real-time log stream to easily spot errors.
-:::
+- **Modern UI:** A clean design with full Light/Dark mode support.
+- **Live Dashboard:** Real-time monitoring of Battery and RAM.
+- **App Manager:** Bulk install APKs, uninstall system apps, force stop, and extract APKs to PC.
+- **File Explorer:** Full GUI file manager to Copy, Paste, Rename, Delete, Upload, and Download files.
+- **Fastboot & Recovery:** Boot live images without flashing, flash recovery/boot, and sideload ZIPs.
+- **Wireless ADB:** Built-in pairing tool for Android 11+ (Pairing Code support) and TCP/IP toggler.
+- **Tweaks:** Change DPI, Resolution, Animation Scales, and toggle visual pointers.
+- **Backup & Restore:** Create full system backups (`.ab` files) and restore them.
+- **Logcat:** Color-coded (\*In Dark Mode only) real-time log stream to easily spot errors.
+  :::
 
 ##### Platforms:
 
@@ -173,7 +171,7 @@ ATA-GUI is an app that lets you perform advanced tasks on your Android™ device
 - **Support for Multiple User Devices**
 - **Support for enviroment variables**
 - **Auto USB device detection**
-:::
+  :::
 
 #### Platforms:
 
@@ -193,15 +191,15 @@ AYA is a desktop application for easily controlling android devices, which can b
 
 :::details[Features]
 
-* Screen mirror
-* File explorer
-* Application manager
-* Process monitor
-* Layout inspector
-* CPU, memory and FPS monitor
-* Logcat viewer
-* Interactive shell
-:::
+- Screen mirror
+- File explorer
+- Application manager
+- Process monitor
+- Layout inspector
+- CPU, memory and FPS monitor
+- Logcat viewer
+- Interactive shell
+  :::
 
 #### Platforms:
 

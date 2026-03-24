@@ -1,18 +1,19 @@
 ---
-title: " Dumbing down your smartphone, smarting up your dumbphone, and more: ADB for dummies"
+title: ' Dumbing down your smartphone, smarting up your dumbphone, and more: ADB for dummies'
 draft: false
 slug: dumbing-smartphone-smarting-dumbphone-adb-dummies
 description: Whether you phone is too smart, or needs features added, ADB can be used to make your phone work for *you*.
 keywords: []
 pubDate: 2026-03-22T17:34:25.000Z
 categories:
-    - Digital Minimalism
-    - Android
+  - Digital Minimalism
+  - Android
 tags:
-    - Android
-    - Guides
-    - ADB
+  - Android
+  - Guides
+  - ADB
 ---
+
 ## **What is ADB?**
 
 ADB is a tool that you can use from your computer to do a lot things to Android phones that can't be done from the phone itself.
@@ -86,7 +87,7 @@ You can [download it from here](https://guiscrcpy.srev.in/).
 
 ## ADB Commands
 
-If you *do* want to learn about using ADB the old fashioned way, here are some useful commands:
+If you _do_ want to learn about using ADB the old fashioned way, here are some useful commands:
 
 `adb devices` shows which devices are connected to the computer.
 
@@ -114,9 +115,6 @@ PM is the package manager, which deals with apps.
 
 `adb shell am force-stop {package_name}` will kill the app.
 
-- - -
+---
 
 ## Shizuku
-
-
-

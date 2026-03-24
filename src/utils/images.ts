@@ -8,7 +8,9 @@ type OptimizedImage = Awaited<ReturnType<ImagesOptimizer>>[0];
 const load = async function () {
   let images: Record<string, () => Promise<unknown>> | undefined = undefined;
   try {
-    images = import.meta.glob('~/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
+    images = import.meta.glob(
+      '~/my-site/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}'
+    );
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     // continue regardless of error
@@ -38,8 +40,8 @@ export const findImage = async (
     return imagePath;
   }
 
-  // Relative paths or not "~/assets/"
-  if (!imagePath.startsWith('~/assets/images')) {
+  // Relative paths or not "~/my-site/assets/"
+  if (!imagePath.startsWith('~/my-site/assets/images')) {
     return imagePath;
   }
 

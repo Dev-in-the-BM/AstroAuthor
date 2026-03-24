@@ -1,5 +1,5 @@
 ---
-import '~/assets/styles/tailwind.css';
+import '~/my-site/assets/styles/tailwind.css';
 
 import { I18N } from 'astrowind:config';
 
@@ -66,7 +66,9 @@ const { language, textDirection } = I18N;
 
       .rlc-container:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+        box-shadow:
+          0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
         border-color: rgb(var(--aw-color-primary) / 0.8);
       }
 
@@ -161,7 +163,7 @@ const { language, textDirection } = I18N;
         if (typeof Fancybox !== 'undefined') {
           Fancybox.unbind('[data-fancybox]');
           Fancybox.bind('[data-fancybox]', {
-            Images: { zoom: true }
+            Images: { zoom: true },
           });
         }
 
@@ -176,7 +178,7 @@ const { language, textDirection } = I18N;
 
       // Clean up link preview cards for better display
       function cleanupLinkCards() {
-        document.querySelectorAll('.rlc-container').forEach(card => {
+        document.querySelectorAll('.rlc-container').forEach((card) => {
           const href = card.getAttribute('href');
           if (!href) return;
 
@@ -187,7 +189,7 @@ const { language, textDirection } = I18N;
               const url = new URL(href);
               // Remove 'www.' for a cleaner look and show only the hostname
               urlDisplay.textContent = url.hostname.replace(/^www\./, '');
-            } catch (e) {
+            } catch {
               /* Fallback for invalid URLs, do nothing */
             }
           }
@@ -198,7 +200,9 @@ const { language, textDirection } = I18N;
             const desc = card.querySelector('.rlc-description');
 
             if (desc?.textContent) {
-              desc.textContent = desc.textContent.replace(/\s*Contribute to [^\s]+ development by creating an account on GitHub\.?/i, '').trim();
+              desc.textContent = desc.textContent
+                .replace(/\s*Contribute to [^\s]+ development by creating an account on GitHub\.?/i, '')
+                .trim();
             }
             if (title?.textContent) {
               const titleMatch = title.textContent.match(/GitHub - ([^:]+)/);
@@ -212,17 +216,17 @@ const { language, textDirection } = I18N;
 
       // Smooth animation for <details> tags
       function setupSmoothDetails() {
-        document.querySelectorAll('details').forEach(details => {
+        document.querySelectorAll('details').forEach((details) => {
           const summary = details.querySelector('summary');
           if (!summary || details.dataset.smoothInit) return;
-          details.dataset.smoothInit = "true";
+          details.dataset.smoothInit = 'true';
 
           summary.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             // Prevent clicking while animation is already running
             if (details.dataset.isAnimating) return;
-            details.dataset.isAnimating = "true";
+            details.dataset.isAnimating = 'true';
 
             const isOpen = details.hasAttribute('open');
 
@@ -235,7 +239,7 @@ const { language, textDirection } = I18N;
 
               details.style.height = startHeight + 'px';
               details.style.overflow = 'hidden';
-              details.offsetHeight; // force browser reflow
+              void details.offsetHeight; // force browser reflow
 
               details.style.transition = 'height 0.3s ease-in-out';
               details.style.height = endHeight + 'px';
@@ -255,7 +259,7 @@ const { language, textDirection } = I18N;
 
               details.style.height = startHeight + 'px';
               details.style.overflow = 'hidden';
-              details.offsetHeight; // force browser reflow
+              void details.offsetHeight; // force browser reflow
 
               details.style.transition = 'height 0.3s ease-in-out';
               details.style.height = endHeight + 'px';
