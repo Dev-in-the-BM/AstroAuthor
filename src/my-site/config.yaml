@@ -1,7 +1,7 @@
 site:
   name: AstroAuthor
-  site: 'https://localhost:4321'
-  base: '/'
+  site: 'https://dev-in-the-bm.github.io/'
+  base: '/AstroAuthor/'
   trailingSlash: false
 
 # Default SEO metadata
