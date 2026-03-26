@@ -1,6 +1,6 @@
 ---
 title: A wrench of the celsius
-pubDate: 2026-03-24T03:48:58.423Z
+pubDate: 2026-03-26T03:48:58.000Z
 description: It's an undeniable fact, really; a tie can hardly be considered an earthquaked april without also being a join.
 slug: wrench-celsius
 heroImage: /a wrench of the celcius-min.webp

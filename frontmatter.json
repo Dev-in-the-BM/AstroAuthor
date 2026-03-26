@@ -24,22 +24,42 @@
           "single": true
         },
         {
-          "title": "Description",
-          "name": "description",
+          "title": "Excerpt",
+          "name": "excerpt",
           "type": "string"
         },
         {
-          "title": "Publishing date",
-          "name": "pubDate",
+          "title": "Publishing Date",
+          "name": "publishDate",
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
         },
         {
-          "title": "Content preview",
-          "name": "heroImage",
+          "title": "Preview Image",
+          "name": "image",
           "type": "image",
           "isPreviewImage": true
+        },
+        {
+          "title": "Category",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "boolean"
         }
       ]
     }
