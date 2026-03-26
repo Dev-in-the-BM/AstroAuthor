@@ -1,10 +1,15 @@
 ---
 title: A wrench of the celsius
-pubDate: 2026-03-26T03:48:58.000Z
-description: It's an undeniable fact, really; a tie can hardly be considered an earthquaked april without also being a join.
 slug: wrench-celsius
 heroImage: /a wrench of the celcius-min.webp
-keywords: []
+excerpt: It's an undeniable fact, really; a tie can hardly be considered an earthquaked april without also being a join.
+publishDate: 2026-03-26T05:11:29.622Z
+image: /a wrench of the celcius-min.webp
+tags:
+    - Lorum Ipsum
+    - Tag1
+    - Placeholder Article
+category: Placeholder articles
 ---
 
 # A port is a dancer's ethernet.
