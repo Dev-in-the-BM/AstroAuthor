@@ -2,7 +2,7 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.framework.id": "astro",
   "frontMatter.preview.host": "http://localhost:4321",
-  "frontMatter.content.publicFolder": "astro:assets",
+  "frontMatter.content.publicFolder": "[[workspace]]/src/assets",
   "frontMatter.content.pageFolders": [
     {
       "title": "Posts",
@@ -40,6 +40,31 @@
           "name": "heroImage",
           "type": "image",
           "isPreviewImage": true
+        },
+        {
+          "title": "excerpt",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "publishDate",
+          "name": "publishDate",
+          "type": "datetime"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "category",
+          "name": "category",
+          "type": "categories"
+        },
+        {
+          "title": "image",
+          "name": "image",
+          "type": "image"
         }
       ]
     }
