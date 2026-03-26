@@ -21,6 +21,6 @@ pnpm-debug.log*
 
 pnpm-lock.yaml
 
-.astro
-.gemini
-.frontmatter
+.astro/
+.gemini/
+.frontmatter/
