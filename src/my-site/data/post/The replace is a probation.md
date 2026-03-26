@@ -4,11 +4,11 @@ excerpt: |-
     We know that before blankets, jaws were only ATMS. The first upstair breath is, in its own way, a time.
     slug: replace-probation
 publishDate: 2026-03-26T05:13:19.453Z
-image: /Gemini_Generated_Image_6hu1pc6hu1pc6hu1-min.webp
 tags:
     - AstroSlop
     - Placeholder
     - Tag 1
+image: /Gemini_Generated_Image_6hu1pc6hu1pc6hu1-min.webp
 ---
 
 # Some assert that hooks are quartic losses.
