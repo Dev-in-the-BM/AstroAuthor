@@ -3,6 +3,7 @@ title: The replace is a probation.
 pubDate: 2026-03-24T03:48:58.423Z
 description: We know that before blankets, jaws were only ATMS. The first upstair breath is, in its own way, a time.
 slug: replace-probation
+heroImage: /Gemini_Generated_Image_6hu1pc6hu1pc6hu1-min.webp
 ---
 
 # Some assert that hooks are quartic losses.
