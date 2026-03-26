@@ -3,6 +3,8 @@ title: A wrench of the celsius
 pubDate: 2026-03-24T03:48:58.423Z
 description: It's an undeniable fact, really; a tie can hardly be considered an earthquaked april without also being a join.
 slug: wrench-celsius
+heroImage: /a wrench of the celcius-min.webp
+keywords: []
 ---
 
 # A port is a dancer's ethernet.
