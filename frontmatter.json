@@ -5,8 +5,8 @@
   "frontMatter.content.publicFolder": "[[workspace]]/src/assets",
   "frontMatter.content.pageFolders": [
     {
-      "title": "Posts",
-      "path": "[[workspace]]/src/data/post"
+      "title": "post",
+      "path": "[[workspace]]/src/content/post"
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
@@ -68,5 +68,6 @@
         }
       ]
     }
-  ]
+  ],
+  "frontMatter.git.enabled": true
 }
