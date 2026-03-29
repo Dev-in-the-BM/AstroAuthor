@@ -6,6 +6,7 @@ excerpt: To be more specific, some posit the horsy dashboard to be less than seq
 image: ../../assets/lost without worldwide sky.png
 heroImage: ../../assets/lost without worldwide sky.png
 slug: lost-worldwide-sky
+category: Placeholder
 ---
 
 
