@@ -8,8 +8,7 @@ tags:
     - Lorum Ipsum
     - Tag1
     - Placeholder Article
-category:
-    - Category 1
+category: Category 1
 ---
 
 #  port is a dancer's ethernet.
