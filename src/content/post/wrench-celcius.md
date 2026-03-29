@@ -1,7 +1,6 @@
 ---
 title: A wrench of the celsius
 pubDate: 2026-03-26T05:11:29.622
-description: It's an undeniable fact, really; a tie can hardly be considered an earthquaked april without also being a join.
 image: ../../assets/a wrench of the celcius-min.webp
 heroImage: ../../assets/a wrench of the celcius-min.webp
 tags:
@@ -9,6 +8,7 @@ tags:
     - Tag1
     - Placeholder Article
 category: Category 1
+excerpt: It's an undeniable fact, really; a tie can hardly be considered an earthquaked april without also being a join.
 ---
 
 ##  A port is a dancer's ethernet.
