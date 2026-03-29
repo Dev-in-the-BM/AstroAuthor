@@ -1,10 +1,10 @@
-# My Blog Site
+# AstroAuthor Template
 
-This is a personal blog site built using [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/), forked from the [AstroWind](https://astrowind.vercel.app/) template.
+AstroAuthor is a blog-focused template built using [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/), forked from the [AstroWind](https://astrowind.vercel.app/) template. It is designed to provide a rich authoring experience out of the box.
 
 ## Overview
 
-This blog site expands upon the base AstroWind template with several new features and enhancements focused on improving the content authoring experience and visual presentation. Key improvements include:
+This template expands upon the base AstroWind template with several new features and enhancements focused on improving the content authoring experience and visual presentation. Key improvements include:
 
 *   **Enhanced Markdown Authoring:** Intuitive Markdown syntax for common formatting needs.
 *   **Dynamic Image Controls:** Control image dimensions and alignment directly from Markdown.
