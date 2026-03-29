@@ -1,70 +1,30 @@
-import { z, defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { defineCollection, z } from 'astro:content';
 
-const metadataDefinition = () =>
-  z
-    .object({
-      title: z.string().optional(),
-      ignoreTitleTemplate: z.boolean().optional(),
-
-      canonical: z.string().url().optional(),
-
-      robots: z
-        .object({
-          index: z.boolean().optional(),
-          follow: z.boolean().optional(),
-        })
-        .optional(),
-
+// Define a `post` collection
+const postCollection = defineCollection({
+  type: 'content',
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
       description: z.string().optional(),
 
-      openGraph: z
-        .object({
-          url: z.string().optional(),
-          siteName: z.string().optional(),
-          images: z
-            .array(
-              z.object({
-                url: z.string(),
-                width: z.number().optional(),
-                height: z.number().optional(),
-              })
-            )
-            .optional(),
-          locale: z.string().optional(),
-          type: z.string().optional(),
-        })
-        .optional(),
+      // These are all optional, to accommodate different posts
+      excerpt: z.string().optional(),
+      tags: z.array(z.string()).optional(),
+      category: z.string().optional(),
 
-      twitter: z
-        .object({
-          handle: z.string().optional(),
-          site: z.string().optional(),
-          cardType: z.string().optional(),
-        })
-        .optional(),
-    })
-    .optional();
+      // Dates can be tricky. We'll accept both and coerce them to a Date object.
+      publishDate: z.coerce.date().optional(),
+      pubDate: z.coerce.date().optional(),
 
-const postCollection = defineCollection({
-  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
-  schema: z.object({
-    publishDate: z.date().optional(),
-    updateDate: z.date().optional(),
-    draft: z.boolean().optional(),
-
-    title: z.string(),
-    excerpt: z.string().optional(),
-    image: z.string().optional(),
-
-    category: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    author: z.string().optional(),
-
-    metadata: metadataDefinition(),
-  }),
+      // This is the important part!
+      // The `image()` helper tells Astro to process the path from the frontmatter.
+      image: image().optional(),
+      heroImage: image().optional(),
+    }),
 });
 
+// Export a single `collections` object to register your collection(s)
 export const collections = {
   post: postCollection,
 };

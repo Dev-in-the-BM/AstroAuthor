@@ -6,7 +6,7 @@ export interface Props {
 const { headings } = Astro.props;
 
 // Filter for standard section headers (h2 and h3) to keep it clean
-const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const toc = (headings || []).filter((h) => h.depth >= 1 && h.depth <= 3); // Include H1, H2, H3
 ---
 
 {toc.length > 0 ? (
@@ -17,7 +17,11 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
       </div>
       <ul class="flex flex-col gap-2.5 text-sm">
         {toc.map((heading) => (
-          <li class={heading.depth === 3 ? "ml-4" : ""}>
+          <li class:list={[
+            heading.depth === 2 && "ml-4", // Indent H2s
+            heading.depth === 3 && "ml-8", // Indent H3s further
+            // No margin for H1s
+          ]}>
             <a
               href={`#${heading.slug}`}
               class="text-gray-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors line-clamp-2"

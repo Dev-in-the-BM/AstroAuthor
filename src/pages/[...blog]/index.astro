@@ -30,7 +30,11 @@ const image = (await findImage(post.image)) as ImageMetadata | string | undefine
 // Reach into Astro's content collection to extract the hidden headings array
 let headings = [];
 try {
-  const entry = await getEntry('post', post.id || post.slug);
+  // In Astro 5, content IDs typically exclude the file extension, whereas Astrowind's post.id might include it
+  const rawId = post.id || post.slug;
+  const cleanId = rawId.replace(/\.mdx?$/, '');
+  
+  const entry = await getEntry('post', cleanId) || await getEntry('post', rawId);
   if (entry) {
     const rendered = await render(entry);
     headings = rendered.headings || [];

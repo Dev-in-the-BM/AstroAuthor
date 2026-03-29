@@ -1,11 +1,15 @@
 ---
 title: The replace is a probation.
-pubDate: 2026-03-24T03:48:58.423Z
+pubDate: 2026-03-27T19:18:24.587Z
 description: We know that before blankets, jaws were only ATMS. The first upstair breath is, in its own way, a time.
-slug: replace-probation
+image: ../../assets/Gemini_Generated_Image_6hu1pc6hu1pc6hu1-min.webp
+heroImage: ../../assets/Gemini_Generated_Image_6hu1pc6hu1pc6hu1-min.webp
+tags:
+    - Lorum Ipsum
+    - Placeholder Article
 ---
 
-# Some assert that hooks are quartic losses.
+## Some assert that hooks are quartic losses.
 
 A tie is a cheetah's museum. This is not to discredit the idea that few can name a verbose sneeze that isn't a backstage interviewer. Some assert that the cannon is a raven. A soulless dungeon is a drizzle of the mind.
 
